@@ -26,7 +26,7 @@ app.use(cookies());
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Welcome to the APIdfdf");
+  res.send("Welcome to the APi anfter modification");
 });
 
 app.get("/api/test", (req, res) => {
