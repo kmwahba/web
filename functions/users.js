@@ -24,6 +24,10 @@ function deleteUser(req, res) {
 async function register(req, res) {
   const { username, password, email } = req.body;
 
+  if (typeof username !== 'string' || typeof password !== 'string' || typeof email !== 'string') {
+    return res.status(400).send('Invalid input types. Username, password, and email must be strings.');
+  }
+  
   if (!username || !password || !email) {
     return res.status(400).send('Username, password, and email are required.');
   }
